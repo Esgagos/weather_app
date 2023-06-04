@@ -10,9 +10,12 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    
+
     <link rel="stylesheet" href="./src/style.css" />
-    <script src="https://kit.fontawesome.com/40dd2f1e0a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/40dd2f1e0a.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather app</title>
   </head>
@@ -27,7 +30,7 @@
         <nav class="navbar navbar-dark bg-primary">
           <div class="container-fluid">
             <a class="navbar-brand weather" href="#">Weather forecast</a>
-          </div>  
+          </div>
         </nav>
 
         <form class="d-flex search" id="form-search">
@@ -39,26 +42,33 @@
             id="location-input"
           />
           <button class="btn btn-primary" type="submit">Search</button>
-         <button type="button" class="btn btn-outline-primary current-temp" id="currentTemp">Current temp</button>
+          <button
+            type="button"
+            class="btn btn-outline-primary current-temp"
+            id="currentTemp"
+          >
+            Current temp
+          </button>
         </form>
-        
 
         <div class="row">
           <div class="col-6">
             <h1 class="location" id="searched-location">London</h1>
             <h3 class="degrees" id="degrees">
-              <div id="tempValue" class="temp-value">
-              </div>
+              <div id="tempValue" class="temp-value"></div>
               <div class="units">
-                <span id="celsiusLink" class="temp-link">&nbsp;Cº</span> 
+                <span id="celsiusLink" class="temp-link">&nbsp;Cº</span>
                 <span class="divider">|</span>
-                <span id="farenheightLink", class="temp-link">Fº</span>
+                <span id="farenheightLink" , class="temp-link">Fº</span>
               </div>
             </h3>
 
             <div>
-            <p class="temperature" id ="dayHour">Saturday 19:30<br />Heavy rain</p>
-            <p class="temperature">Wind gust (mph)<br />Humidity 53%</p>
+              <p class="temperature" id="dayHour">
+                Saturday 19:30<br />Heavy rain
+              </p>
+              <p class="temperature">Wind gust (mph)<br />Humidity 53%</p>
+            </div>
           </div>
 
           <div class="col-6">
@@ -70,78 +80,71 @@
           </div>
         </div>
 
-      
         <div class="row main-row position relative">
+          <div class="col card">
+            <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
 
-          <div class= "col card">
-               <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
-            
-            <img src="statics/weather-png-9843.png" class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun" alt="img of sun">
-          
-            <div class="card-degree">
-              15º/7º
-            </div> 
-            <p class="card-text">
-                Sunny 
-            </p>
-            <div class="card-wind">
-                Wind gust 14-27 mph 
-            </div>
+            <img
+              src="statics/weather-png-9843.png"
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">15º/7º</div>
+            <p class="card-text">Sunny</p>
+            <div class="card-wind">Wind gust 14-27 mph</div>
           </div>
 
-           <div class= "col card">
-          
-               <h5 class="card-title">Monday <span class="date">9 May</span></h5>
-            
-            <img src="statics/sun-cloud.png" class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun" alt="img of sun">
-          
-            <div class="card-degree">
-              13º/7º
-            </div> 
-            <p class="card-text">
-                Sunny intervals 
-            </p>
-            <div class="card-wind">
-                Wind gust 10-15 mph 
-            </div>
-          </div>
-          
-           <div class= "col card">
-          
-               <h5 class="card-title">Tuesday <span class="date">10 May</span></h5>
-            
-            <img src="statics/sun-cloud.png" class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun" alt="img of sun">
-          
-            <div class="card-degree">
-              15º/7º
-            </div> 
-            <p class="card-text">
-                Sunny intervals
-            </p>
-            <div class="card-wind">
-                Wind gust 11-20 mph 
-            </div>
-          </div>
-          
-           <div class= "col card">
-          
-               <h5 class="card-title">Wednesday <span class="date">11 May</span></h5>
-            
-            <img src="statics/light-rain.png" class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun" alt="img of sun">
-          
-            <div class="card-degree">
-              13º/5º
-            </div> 
-            <p class="card-text">
-                Light rain 
-            </p>
-            <div class="card-wind">
-                Wind gust 12-27 mph 
-            </div>
+          <div class="col card">
+            <h5 class="card-title">Monday <span class="date">9 May</span></h5>
+
+            <img
+              src="statics/sun-cloud.png"
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">13º/7º</div>
+            <p class="card-text">Sunny intervals</p>
+            <div class="card-wind">Wind gust 10-15 mph</div>
           </div>
 
+          <div class="col card">
+            <h5 class="card-title">Tuesday <span class="date">10 May</span></h5>
+
+            <img
+              src="statics/sun-cloud.png"
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">15º/7º</div>
+            <p class="card-text">Sunny intervals</p>
+            <div class="card-wind">Wind gust 11-20 mph</div>
+          </div>
+
+          <div class="col card">
+            <h5 class="card-title">
+              Wednesday <span class="date">11 May</span>
+            </h5>
+
+            <img
+              src="statics/light-rain.png"
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">13º/5º</div>
+            <p class="card-text">Light rain</p>
+            <div class="card-wind">Wind gust 12-27 mph</div>
+          </div>
+          <div class="open-source-footer-link">
+            <a href="https://github.com/Esgagos/weather_app" class="footer"
+              >Open source code</a
+            >
+            <span class="footer-name">by Esperanza Tyldesley</span>
+          </div>
         </div>
-      
       </div>
     </div>
     <script src="src/app.js"></script>

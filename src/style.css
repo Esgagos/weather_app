@@ -96,3 +96,15 @@ h5 {
 .show-current-temp {
   font-size: 25px;
 }
+.open-source-footer-link {
+  margin-top: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.footer {
+  text-decoration: none;
+}
+.footer-name {
+  color: #fdfdfd;
+}
