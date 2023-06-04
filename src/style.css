@@ -1,0 +1,98 @@
+h5 {
+  padding-top: 5px;
+}
+.search {
+  margin-top: 50px;
+  width: 30vw;
+  margin-left: 35vw;
+}
+.page-wrapper {
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+
+.weather {
+  font-size: 30px;
+}
+.card {
+  width: fit-content;
+  height: 250px;
+  background-color: #ffffff;
+  margin: 0;
+  color: #808080;
+}
+.main-row {
+  margin: 0.5rem 18rem;
+  gap: 0.5rem;
+}
+.location {
+  color: #fdfdfd;
+  margin-top: 50px;
+  margin-left: 400px;
+  font-size: 75px;
+}
+.weather-image {
+  width: 270px;
+  margin-top: 60px;
+}
+.temperature {
+  margin-left: 400px;
+  font-size: 16px;
+  color: white;
+}
+.degrees {
+  margin-left: 403px;
+  color: white;
+  font-size: 40px;
+  display: flex;
+}
+.sun {
+  padding-top: -5px;
+  width: 75px;
+}
+.card {
+  background-color: #edeaea;
+  color: #808080;
+  text-align: center;
+}
+.date {
+  opacity: 0.9;
+  font-size: 18px;
+}
+.card-degree {
+  padding-top: 5%;
+}
+.card-wind {
+  font-size: 15px;
+}
+.card-text {
+  font-size: 15px;
+}
+
+.temp-link.selected {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: unset;
+}
+
+.temp-link,
+.divider {
+  font-size: 18px;
+  color: rgb(21, 21, 109);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.units {
+  display: flex;
+}
+.current-temp {
+  position: relative;
+  margin-left: 11px;
+  font-size: 16px;
+}
+.show-current-temp {
+  font-size: 25px;
+}
