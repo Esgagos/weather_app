@@ -35,7 +35,8 @@ h5 {
 }
 .weather-image {
   width: 270px;
-  margin-top: 60px;
+  margin-top: 36px;
+  margin-left: -81px;
 }
 .temperature {
   margin-left: 400px;
@@ -70,14 +71,18 @@ h5 {
 .card-text {
   font-size: 15px;
 }
-
-.temp-link.selected {
-  text-decoration: none;
-  font-weight: 600;
-  cursor: unset;
+.temp-link {
+  color: #fdfdfd;
+  font-size: 18px;
 }
 
-.temp-link,
+.temp-link.active {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  color: #000000;
+}
+
 .divider {
   font-size: 18px;
   color: rgb(21, 21, 109);
@@ -88,14 +93,14 @@ h5 {
 .units {
   display: flex;
 }
-.current-temp {
+/* .current-temp {
   position: relative;
   margin-left: 11px;
   font-size: 16px;
 }
 .show-current-temp {
   font-size: 25px;
-}
+} */
 .open-source-footer-link {
   margin-top: 2rem;
   text-align: center;
@@ -107,4 +112,14 @@ h5 {
 }
 .footer-name {
   color: #fdfdfd;
+}
+.weather-state {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 48px;
+}
+.description {
+  margin-left: 25rem;
+  color: white;
+  text-transform: capitalize;
 }

@@ -42,6 +42,132 @@
             id="location-input"
           />
           <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+
+        <div class="row">
+          <div class="col-6">
+            <h1 class="location" id="searched-location">London</h1>
+            <h3 class="degrees">
+              <div id="tempValue" class="temp-value"></div>
+              <div class="units">
+                <a href="#" id="celsiusLink" class="temp-link active"
+                  >&nbsp;Cº</a
+                >
+                <span class="divider">|</span>
+                <a href="#" id="fahrenheitLink" , class="temp-link">Fº</a>
+              </div>
+            </h3>
+
+            <div>
+              <p id="description" , class="description"></p>
+              <p class="temperature">
+                <small>Last updated on <span id="date"></span></small>
+              </p>
+              <p class="temperature" , id="windGust">
+                Wind gust (mph)<br />Humidity 53%
+              </p>
+              <p class="temperature" , id="humidity"></p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <img
+              src="#"
+              alt="Icon image"
+              class="weather-image"
+              id="weatherIcon"
+            />
+          </div>
+        </div>
+
+        <div class="row main-row position relative">
+          <div class="col card">
+            <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
+
+            <img
+              src=""
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">15º/7º</div>
+            <p class="card-text">Sunny</p>
+            <div class="card-wind">Wind gust 14-27 mph</div>
+          </div>
+
+          <div class="col card">
+            <h5 class="card-title">Monday <span class="date">9 May</span></h5>
+
+            <img
+              src=""
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">13º/7º</div>
+            <p class="card-text">Sunny intervals</p>
+            <div class="card-wind">Wind gust 10-15 mph</div>
+          </div>
+
+          <div class="col card">
+            <h5 class="card-title">Tuesday <span class="date">10 May</span></h5>
+
+            <img
+              src=""
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">15º/7º</div>
+            <p class="card-text">Sunny intervals</p>
+            <div class="card-wind">Wind gust 11-20 mph</div>
+          </div>
+
+          <div class="col card">
+            <h5 class="card-title">
+              Wednesday <span class="date">11 May</span>
+            </h5>
+
+            <img
+              src=""
+              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+              alt="img of sun"
+            />
+
+            <div class="card-degree">13º/5º</div>
+            <p class="card-text">Light rain</p>
+            <div class="card-wind">Wind gust 12-27 mph</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
+
+<!-- <body>
+    <div class="container-fluid p-0 has-bg-img">
+      <div
+        class="bg-img page-wrapper"
+        style="
+          background-image: url('statics/carmine-savarese-KVVpx8M10OY-unsplash.jpg');
+        "
+      >
+        <nav class="navbar navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand weather" href="#">Weather forecast</a>
+          </div>
+        </nav>
+
+        <form class="d-flex search" id="form-search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Enter location"
+            aria-label="Search"
+            id="location-input"
+          />
+          <button class="btn btn-primary" type="submit">Search</button>
           <button
             type="button"
             class="btn btn-outline-primary current-temp"
@@ -73,10 +199,11 @@
 
           <div class="col-6">
             <img
-              src="statics/weather-png-9839.png"
+              src="statics/weather-rain-mainpng-9839.png"
               alt="image of storm"
               class="weather-image"
             />
+            <div class="weather-state">Rain</div>
           </div>
         </div>
 
@@ -85,7 +212,7 @@
             <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
 
             <img
-              src="statics/weather-png-9843.png"
+              src="statics/pngwing.sun .png"
               class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
               alt="img of sun"
             />
@@ -99,7 +226,7 @@
             <h5 class="card-title">Monday <span class="date">9 May</span></h5>
 
             <img
-              src="statics/sun-cloud.png"
+              src="statics/pngwing.snowl.png"
               class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
               alt="img of sun"
             />
@@ -113,7 +240,7 @@
             <h5 class="card-title">Tuesday <span class="date">10 May</span></h5>
 
             <img
-              src="statics/sun-cloud.png"
+              src="statics/pngwing.sun-clouds .png"
               class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
               alt="img of sun"
             />
@@ -129,7 +256,7 @@
             </h5>
 
             <img
-              src="statics/light-rain.png"
+              src="statics/pngwing.light-rain.png"
               class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
               alt="img of sun"
             />
@@ -140,8 +267,9 @@
           </div>
           <div class="open-source-footer-link">
             <a href="https://github.com/Esgagos/weather_app" class="footer"
-              >Open source code</a
+              >Open-source code</a
             >
+
             <span class="footer-name">by Esperanza Tyldesley</span>
           </div>
         </div>
@@ -149,4 +277,4 @@
     </div>
     <script src="src/app.js"></script>
   </body>
-</html>
+</html> -->
