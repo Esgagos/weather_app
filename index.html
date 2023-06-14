@@ -28,7 +28,7 @@
         "
       >
         <nav class="navbar navbar-dark bg-primary">
-          <div class="container-fluid">
+          <div class="container-fluid weather-forecast-nav">
             <a class="navbar-brand weather" href="#">Weather forecast</a>
           </div>
         </nav>
@@ -44,8 +44,8 @@
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
 
-        <div class="row">
-          <div class="col-6">
+        <div class="row column">
+          <div class="col-6 column">
             <h1 class="location" id="searched-location">London</h1>
             <h3 class="degrees">
               <div id="tempValue" class="temp-value"></div>
@@ -58,15 +58,16 @@
               </div>
             </h3>
 
-            <div>
+            <div class="weather-information">
               <p id="description" , class="description"></p>
-              <p class="temperature">
-                <small>Last updated on <span id="date"></span></small>
-              </p>
+
               <p class="temperature" , id="windGust">
                 Wind gust (mph)<br />Humidity 53%
               </p>
               <p class="temperature" , id="humidity"></p>
+              <p class="temperature">
+                <small>Last updated on <span id="date"></span></small>
+              </p>
             </div>
           </div>
 
@@ -79,71 +80,74 @@
             />
           </div>
         </div>
+        <div class="weather-forecast" id="forecast">
+          <!-- <div class="row main-row position relative">
+            <div class="col card">
+              <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
 
-        <div class="row main-row position relative">
-          <div class="col card">
-            <h5 class="card-title">Sunday <span class="date">8 May</span></h5>
+              <img
+                src=""
+                class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+                alt="img of sun"
+              />
 
-            <img
-              src=""
-              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
-              alt="img of sun"
-            />
+              <div class="card-degree">15º/7º</div>
+              <p class="card-text">Sunny</p>
+              <div class="card-wind">Wind gust 14-27 mph</div>
+            </div>
 
-            <div class="card-degree">15º/7º</div>
-            <p class="card-text">Sunny</p>
-            <div class="card-wind">Wind gust 14-27 mph</div>
-          </div>
+            <div class="col card">
+              <h5 class="card-title">Monday <span class="date">9 May</span></h5>
 
-          <div class="col card">
-            <h5 class="card-title">Monday <span class="date">9 May</span></h5>
+              <img
+                src=""
+                class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+                alt="img of sun"
+              />
 
-            <img
-              src=""
-              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
-              alt="img of sun"
-            />
+              <div class="card-degree">13º/7º</div>
+              <p class="card-text">Sunny intervals</p>
+              <div class="card-wind">Wind gust 10-15 mph</div>
+            </div>
 
-            <div class="card-degree">13º/7º</div>
-            <p class="card-text">Sunny intervals</p>
-            <div class="card-wind">Wind gust 10-15 mph</div>
-          </div>
+            <div class="col card">
+              <h5 class="card-title">
+                Tuesday <span class="date">10 May</span>
+              </h5>
 
-          <div class="col card">
-            <h5 class="card-title">Tuesday <span class="date">10 May</span></h5>
+              <img
+                src=""
+                class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+                alt="img of sun"
+              />
 
-            <img
-              src=""
-              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
-              alt="img of sun"
-            />
+              <div class="card-degree">15º/7º</div>
+              <p class="card-text">Sunny intervals</p>
+              <div class="card-wind">Wind gust 11-20 mph</div>
+            </div>
 
-            <div class="card-degree">15º/7º</div>
-            <p class="card-text">Sunny intervals</p>
-            <div class="card-wind">Wind gust 11-20 mph</div>
-          </div>
+            <div class="col card">
+              <h5 class="card-title">
+                Wednesday <span class="date">11 May</span>
+              </h5>
 
-          <div class="col card">
-            <h5 class="card-title">
-              Wednesday <span class="date">11 May</span>
-            </h5>
+              <img
+                src=""
+                class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+                alt="img of sun"
+              />
 
-            <img
-              src=""
-              class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
-              alt="img of sun"
-            />
-
-            <div class="card-degree">13º/5º</div>
-            <p class="card-text">Light rain</p>
-            <div class="card-wind">Wind gust 12-27 mph</div>
-          </div>
-          <div class="open-source-footer-link">
-            <a href="https://github.com/Esgagos/weather_app" class="footer"
-              >Open source code</a
-            >
-            <span class="footer-name">by Esperanza Tyldesley</span>
-          </div>
+              <div class="card-degree">13º/5º</div>
+              <p class="card-text">Light rain</p>
+              <div class="card-wind">Wind gust 12-27 mph</div>
+            </div>
+          </div> -->
+        </div>
+        <div class="open-source-footer-link">
+          <a href="https://github.com/Esgagos/weather_app" class="footer"
+            >Open-source code</a
+          >
+          <span class="footer-name">by Esperanza Tyldesley</span>
         </div>
       </div>
     </div>

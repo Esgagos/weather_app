@@ -46,6 +46,35 @@ function formatDate() {
   let dayName = dayList[day];
   return `${dayName} at ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row main-row">`;
+  let days = ["Thrusday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `    <div class= "col">
+            <div class="card">
+              <h5 class="card-title">${day} <span class="date">8 May</span></h5>
+
+              <img
+                src=""
+                class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
+                alt="img of sun"
+              />
+
+              <div class="card-degree">15º/7º</div>
+              <p class="card-text">Sunny</p>
+              <div class="card-wind">Wind gust 14-27 mph</div>
+            
+            </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  console.log("forecastHTML: ", forecastHTML);
+
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showLocation(response) {
   console.log(response);
@@ -59,7 +88,7 @@ function showLocation(response) {
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   celsiusTemperature = temperature;
-
+  displayForecast();
   let searchedLocation = document.querySelector("#searched-location");
   searchedLocation.innerHTML = cityName;
   let tempValue = document.querySelector("#tempValue");

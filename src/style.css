@@ -1,6 +1,12 @@
 h5 {
   padding-top: 5px;
 }
+nav {
+  box-shadow: 0px -2px, 0em 0 0.2em rgb(1, 5, 8);
+}
+.weather-forecast-nav {
+  margin-bottom: 15px;
+}
 .search {
   margin-top: 50px;
   width: 30vw;
@@ -16,17 +22,12 @@ h5 {
 .weather {
   font-size: 30px;
 }
-.card {
-  width: fit-content;
-  height: 250px;
-  background-color: #ffffff;
-  margin: 0;
-  color: #808080;
-}
+
 .main-row {
-  margin: 0.5rem 18rem;
+  margin: 0.5rem 1rem;
   gap: 0.5rem;
 }
+
 .location {
   color: #fdfdfd;
   margin-top: 50px;
@@ -54,10 +55,14 @@ h5 {
   width: 75px;
 }
 .card {
-  background-color: #edeaea;
+  height: 250px;
+  background-color: #ffffff;
   color: #808080;
+  opacity: 0.7;
   text-align: center;
+  box-shadow: 1px -1px, 0.1em 0 0.2em rgb(1, 5, 8);
 }
+
 .date {
   opacity: 0.9;
   font-size: 18px;
@@ -70,6 +75,7 @@ h5 {
 }
 .card-text {
   font-size: 15px;
+  color: rgb(97, 95, 95);
 }
 .temp-link {
   color: #fdfdfd;
@@ -102,7 +108,6 @@ h5 {
   font-size: 25px;
 } */
 .open-source-footer-link {
-  margin-top: 2rem;
   text-align: center;
   font-style: italic;
 }
@@ -122,4 +127,16 @@ h5 {
   margin-left: 25rem;
   color: white;
   text-transform: capitalize;
+}
+.weather-information {
+  line-height: 12px;
+  font-style: italic;
+}
+.column {
+  margin-top: 10px;
+}
+.weather-forecast {
+  max-width: 75vw;
+  margin-left: 12.5vw;
+  margin-top: 25px;
 }
