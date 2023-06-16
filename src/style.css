@@ -61,6 +61,7 @@ nav {
   opacity: 0.7;
   text-align: center;
   box-shadow: 1px -1px, 0.1em 0 0.2em rgb(1, 5, 8);
+  line-height: 1.7;
 }
 
 .date {
@@ -76,6 +77,10 @@ nav {
 .card-text {
   font-size: 15px;
   color: rgb(97, 95, 95);
+  text-transform: capitalize;
+}
+.card-title {
+  font-weight: 200;
 }
 .temp-link {
   color: #fdfdfd;
@@ -138,5 +143,9 @@ nav {
 .weather-forecast {
   max-width: 75vw;
   margin-left: 12.5vw;
-  margin-top: 25px;
+  margin-top: 55px;
+}
+.min-temperature {
+  font-weight: 200;
+  color: #808080;
 }

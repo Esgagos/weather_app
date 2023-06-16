@@ -46,40 +46,84 @@ function formatDate() {
   let dayName = dayList[day];
   return `${dayName} at ${hours}:${minutes}`;
 }
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let dateNumber = date.getDate();
+  let month = date.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return days[day] + " " + dateNumber + " " + months[month];
+}
+function displayForecast(response) {
+  console.log(response);
+  console.log(response.data.daily);
+  let forecastday = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row main-row">`;
-  let days = ["Thrusday", "Friday", "Saturday", "Sunday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `    <div class= "col">
+  forecastday.forEach(function (forecast, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `    <div class= "col">
             <div class="card">
-              <h5 class="card-title">${day} <span class="date">8 May</span></h5>
+              <h5 class="card-title">${formatDay(
+                forecast.time
+              )} <span class="date"></span></h5>
 
               <img
-                src=""
+                src="${forecast.condition.icon_url}"
                 class="card-img img-fluid position-relative top-0 start-50 translate-middle-x translate-middle sun"
-                alt="img of sun"
+                alt="weather icon"
               />
 
-              <div class="card-degree">15º/7º</div>
-              <p class="card-text">Sunny</p>
-              <div class="card-wind">Wind gust 14-27 mph</div>
+              <div class="card-degree">${Math.round(
+                forecast.temperature.maximum
+              )}º <small class= "min-temperature">  ${Math.round(
+          forecast.temperature.minimum
+        )}º</small></div>
+              <p class="card-text">${forecast.condition.description}
+                
+              </p>
+              <div class="card-wind">Wind gust ${forecast.wind.speed} mph</div>
+              <div class= "card-humidity"> Humidity ${
+                forecast.temperature.humidity
+              } %</div>
             
             </div>
             </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
-  console.log("forecastHTML: ", forecastHTML);
-
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  const apiKey = "6e77343taf210f7060a5ae1ab4ao9183";
+  const apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}`;
+  console.log(coordinates.longitude);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showLocation(response) {
   console.log(response);
+  // console.log(response.data.coordinates);
   let cityName = response.data.city;
   let temperature = Math.round(response.data.temperature.current);
+
   let tempDescription = response.data.condition.description;
   let wind = response.data.wind.speed;
   let humidity = response.data.temperature.humidity;
@@ -88,7 +132,8 @@ function showLocation(response) {
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   celsiusTemperature = temperature;
-  displayForecast();
+
+  getForecast(response.data.coordinates);
   let searchedLocation = document.querySelector("#searched-location");
   searchedLocation.innerHTML = cityName;
   let tempValue = document.querySelector("#tempValue");
