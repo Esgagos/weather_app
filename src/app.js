@@ -70,7 +70,7 @@ function formatDay(timestamp) {
 }
 function displayForecast(response) {
   console.log(response);
-  console.log(response.data.daily);
+
   let forecastday = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row main-row">`;
@@ -98,7 +98,9 @@ function displayForecast(response) {
               <p class="card-text">${forecast.condition.description}
                 
               </p>
-              <div class="card-wind">Wind gust ${forecast.wind.speed} mph</div>
+              <div class="card-wind">Wind gust ${Math.round(
+                forecast.wind.speed
+              )} mph</div>
               <div class= "card-humidity"> Humidity ${
                 forecast.temperature.humidity
               } %</div>
@@ -114,13 +116,13 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   const apiKey = "6e77343taf210f7060a5ae1ab4ao9183";
   const apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}`;
-  console.log(coordinates.longitude);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showLocation(response) {
   console.log(response);
-  // console.log(response.data.coordinates);
+
   let cityName = response.data.city;
   let temperature = Math.round(response.data.temperature.current);
 

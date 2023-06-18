@@ -121,7 +121,7 @@ nav {
   text-decoration: none;
 }
 .footer-name {
-  color: #fdfdfd;
+  color: #e5a722;
 }
 .weather-state {
   color: #ffffff;
@@ -144,6 +144,7 @@ nav {
   max-width: 75vw;
   margin-left: 12.5vw;
   margin-top: 55px;
+  margin-bottom: 20px;
 }
 .min-temperature {
   font-weight: 200;
